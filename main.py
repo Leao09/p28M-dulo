@@ -1,6 +1,4 @@
 import os
-import sys
-import speech_recognition as sr
 from gtts import gTTS
 import playsound
 # Função para converter texto em fala e reproduzir
@@ -12,5 +10,10 @@ def speak_text(text):
 
 
 if __name__ == "__main__":
- frase = str(input("Digite algo para ser falado"))
- speak_text(frase)
+ 
+ n = "sim"
+
+ while n == "sim":
+    frase = str(input("Digite algo para ser falado"))
+    speak_text(frase)
+    n = str(input("Deseja continuar hablando? sim ou nao"))
